@@ -1,188 +1,292 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NihonTV</title>
+<meta name="google-site-verification" content="TQcHHEOLtreLOdEBXt1VTbqPmk6oWtSBQwACCyimwDs">
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<title>RFM 89 Ao Vivo | Ouvir Rádio Online Grátis Portugal - NihonTV</title>
 
+<meta name="description" content="Ouça a RFM 89 ao vivo online grátis em Portugal. Rádio com músicas, entretenimento e transmissão ao vivo 24h direto no seu celular ou computador.">
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ildebrando Leandro">
+<meta name="theme-color" content="#000000">
+
+<!-- CANONICAL CORRETO -->
+<link rel="canonical" href="https://nihontv2026.github.io/nihontv/index1.html">
+
+<!-- OPEN GRAPH (WHATSAPP / FACEBOOK) -->
+<meta property="og:title" content="RFM 89 Ao Vivo - Rádio Online Grátis">
+<meta property="og:description" content="Ouça a RFM ao vivo agora mesmo direto do seu celular ou computador.">
+<meta property="og:image" content="https://nihontv2026.github.io/nihontv/neon.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://nihontv2026.github.io/nihontv/index1.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NihonTV">
+<meta property="og:locale" content="pt_PT">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RFM 89 Ao Vivo - Rádio Online Grátis">
+<meta name="twitter:description" content="Ouça a RFM ao vivo agora mesmo direto do seu celular ou computador.">
+<meta name="twitter:image" content="https://nihontv2026.github.io/nihontv/neon.png">
+
+<!-- GEO SEO -->
+<meta name="geo.region" content="PT">
+<meta name="geo.placename" content="Bragança">
+
+<!-- FAVICON -->
 <link rel="icon" href="neonlogo.png?v=1">
 
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8BQ0B9YTW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-H8BQ0B9YTW');
+</script>
+
+<!-- DADOS ESTRUTURADOS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RadioStation",
+  "name": "RFM 89 Ao Vivo",
+  "url": "https://nihontv2026.github.io/nihontv/index1.html",
+  "logo": "https://nihontv2026.github.io/nihontv/neon.png"
+}
+</script>
 
 <style>
 
+/* RESET */
 body{
     margin:0;
-    font-family:Arial;
-    background:#0f0f0f;
+    font-family:Arial, sans-serif;
+    background:#000;
     color:#fff;
 }
 
+/* HEADER */
 .header{
-    background:#202020;
-    padding:15px;
     text-align:center;
-    font-size:22px;
+    padding:25px 10px 10px;
+    font-size:32px;
     font-weight:bold;
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff, 0 0 25px #00f7ff;
 }
 
-.container{
-    padding:15px;
-}
-
-#player{
-    width:100%;
-    height:420px;
-    background:black;
+.sub{
+    text-align:center;
+    color:#ff00ff;
     margin-bottom:20px;
+    text-shadow:0 0 10px #ff00ff;
 }
 
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:15px;
-}
-
+/* CARD */
 .card{
-    background:#1c1c1c;
-    border-radius:8px;
-    overflow:hidden;
-    transition:0.3s;
+    width:90%;
+    margin:0 auto;
+    padding:25px;
+    background:#0a0a0a;
+    border-radius:12px;
+    box-shadow:0 0 25px #ff00ff;
+    text-align:center;
 }
 
-.card:hover{
-    transform:scale(1.05);
+.card h2{
+    margin-bottom:15px;
 }
 
-.card img{
+/* PLAYER */
+audio{
     width:100%;
-    height:150px;
-    object-fit:contain;
-    background:black;
+    max-width:500px;
+    margin:10px auto;
+    display:block;
 }
 
-.card-body{
-    padding:10px;
-}
-
+/* BOTÃO */
 button{
-    width:100%;
-    padding:8px;
-    background:red;
+    padding:12px 25px;
     border:none;
-    color:#fff;
-    border-radius:5px;
+    background:#00f7ff;
+    color:#000;
+    font-weight:bold;
+    border-radius:6px;
     cursor:pointer;
-    margin-top:5px;
+    box-shadow:0 0 15px #00f7ff;
 }
 
 button:hover{
-    background:darkred;
+    background:#ff00ff;
+    box-shadow:0 0 20px #ff00ff;
 }
 
-/* 🔥 DESTAQUE SUA FOTO */
-.destaque{
-    border:2px solid #00c3ff;
-    box-shadow:0 0 15px rgba(0,195,255,0.5);
+/* WHATS */
+.whatsapp{
+    margin-top:15px;
+    color:#00ff88;
+    font-weight:bold;
+    text-shadow:0 0 10px #00ff88;
 }
 
-.destaque:hover{
-    transform:scale(1.07);
-    box-shadow:0 0 25px rgba(0,195,255,1);
+/* BANNER */
+.banner{
+    width:100%;
+    margin-top:30px;
 }
 
-.destaque img{
-    object-fit:cover;
+.banner img{
+    width:100%;
+    height:auto;
+    border-top:2px solid #ff00ff;
+    box-shadow:0 0 30px #00f7ff;
 }
 
-.destaque a{
+/* FOOTER */
+.footer{
+    background:#ff0000;
+    color:#fff;
+    box-shadow:0 0 30px red;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.footer-container div{
+    margin:10px;
+    text-shadow:0 0 10px #fff;
+}
+
+.copy{
+    background:#111;
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+}
+
+.link{
+    color:#fff;
     text-decoration:none;
-    color:white;
+    font-size:16px;
+    font-weight:bold;
 }
 
-.tv{
+.link:hover{
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
+}
 
-    text-decoration: none;
-    color: #fff;
+/* RESPONSIVO */
+@media (max-width:768px){
+
+    .header{
+        font-size:22px;
+    }
+
+    .sub{
+        font-size:14px;
+        padding:0 10px;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    button{
+        width:100%;
+        max-width:300px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="header"> <a class="tv" href="index.html" target="_blank">NihonTV - Ao Vivo</a> </div>
-
-<div class="container">
-
-<video id="player" controls></video>
-
-<div class="video-grid">
-
-<div class="card">
-<img src="Nippon_TV_logo_2014.svg.png">
-<div class="card-body">
-Nippon TV
-<button onclick="play('https://nl.utako.moe/Nippon_TV/index.m3u8')">Assistir</button>
+<div class="header">
+ILDEBRANDO LEANDRO
 </div>
+
+<div class="sub">
+Professor formado em Marketing e Administração de Empresas
 </div>
 
 <div class="card">
-<img src="TBS_2004_logo.svg.png">
-<div class="card-body">
-TBS
-<button onclick="play('https://nl.utako.moe/TBS/index.m3u8')">Assistir</button>
-</div>
+
+<h2>🎧 Rádio ao Vivo</h2>
+
+<audio id="audio" controls>
+<source src="https://playerservices.streamtheworld.com/api/livestream-redirect/RFM_SC" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<button onclick="playRadio()">▶️ Play Rádio</button>
+
+<div class="whatsapp">
+📱 WhatsApp: +55 11 97361-5502
 </div>
 
-<div class="card">
-<img src="Fuji_tv_logo.png">
-<div class="card-body">
-Fuji TV
-<button onclick="play('https://nl.utako.moe/Fuji_TV/index.m3u8')">Assistir</button>
-</div>
 </div>
 
-<div class="card">
-<img src="asahi tv.png">
-<div class="card-body">
-TV Asahi
-<button onclick="play('https://nl.utako.moe/TV_Asahi/index.m3u8')">Assistir</button>
-</div>
+<div class="banner">
+<img src="neon.png" alt="Ildebrando Leandro">
 </div>
 
-<!-- 🔥 SUA FOTO CLICÁVEL -->
-<div class="card destaque">
-<a href="https://professorildebrandoleandro.github.io/Ildebrando.html" target="_blank">
-<img src="professor.jpeg">
-<div class="card-body">
-Ildebrando Leandro
-<button>Ver Perfil</button>
-</div>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>📱 WhatsApp<br>+55 11 97361-5502</div>
+
+<div>
+🌐 Website<br> 
+<a href="https://nihontv2026.github.io/" target="_blank" class="link">
+https://nihontv2026.github.io
 </a>
 </div>
 
+<div>🎓 Formação<br>Marketing e Administração</div>
+
+<div>📍 Localização<br>Bragança - Portugal</div>
+
 </div>
+
+<div class="copy">
+© 2026 Ildebrando Leandro - Todos os direitos reservados
 </div>
+
+</footer>
 
 <script>
-
-function play(url){
-    const video = document.getElementById('player');
-
-    if(Hls.isSupported()){
-        const hls = new Hls();
-        hls.loadSource(url);
-        hls.attachMedia(video);
-    }else{
-        video.src = url;
-    }
-
-    video.play();
+function playRadio(){
+document.getElementById("audio").play();
 }
-
 </script>
 
 </body>
