@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NihonTV</title>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<link rel="icon" href="neonlogo.png?v=1">
+
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:#fff;
+}
+
+.header{
+    background:#202020;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.container{
+    padding:15px;
+}
+
+#player{
+    width:100%;
+    height:420px;
+    background:black;
+    margin-bottom:20px;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#1c1c1c;
+    border-radius:8px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:contain;
+    background:black;
+}
+
+.card-body{
+    padding:10px;
+}
+
+button{
+    width:100%;
+    padding:8px;
+    background:red;
+    border:none;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+button:hover{
+    background:darkred;
+}
+
+/* 🔥 DESTAQUE SUA FOTO */
+.destaque{
+    border:2px solid #00c3ff;
+    box-shadow:0 0 15px rgba(0,195,255,0.5);
+}
+
+.destaque:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 25px rgba(0,195,255,1);
+}
+
+.destaque img{
+    object-fit:cover;
+}
+
+.destaque a{
+    text-decoration:none;
+    color:white;
+}
+
+.tv{
+
+    text-decoration: none;
+    color: #fff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header"> <a class="tv" href="index.html" target="_blank">NihonTV - Ao Vivo</a> </div>
+
+<div class="container">
+
+<video id="player" controls></video>
+
+<div class="video-grid">
+
+<div class="card">
+<img src="Nippon_TV_logo_2014.svg.png">
+<div class="card-body">
+Nippon TV
+<button onclick="play('https://nl.utako.moe/Nippon_TV/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<div class="card">
+<img src="TBS_2004_logo.svg.png">
+<div class="card-body">
+TBS
+<button onclick="play('https://nl.utako.moe/TBS/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Fuji_tv_logo.png">
+<div class="card-body">
+Fuji TV
+<button onclick="play('https://nl.utako.moe/Fuji_TV/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<div class="card">
+<img src="asahi tv.png">
+<div class="card-body">
+TV Asahi
+<button onclick="play('https://nl.utako.moe/TV_Asahi/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<!-- 🔥 SUA FOTO CLICÁVEL -->
+<div class="card destaque">
+<a href="https://professorildebrandoleandro.github.io/Ildebrando.html" target="_blank">
+<img src="professor.jpeg">
+<div class="card-body">
+Ildebrando Leandro
+<button>Ver Perfil</button>
+</div>
+</a>
+</div>
+
+</div>
+</div>
+
+<script>
+
+function play(url){
+    const video = document.getElementById('player');
+
+    if(Hls.isSupported()){
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    }else{
+        video.src = url;
+    }
+
+    video.play();
+}
+
+</script>
+
+</body>
+</html>

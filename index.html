@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<!-- SEO BASE -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NihonTV - TV Japonesa, Brasil, UFC, Filmes, Séries e Desenhos Ao Vivo Grátis</title>
+
+<meta name="description" content="Assista TV japonesa, canais do Brasil, UFC Combate, HBO, Telecine, filmes, séries, desenhos e muito mais AO VIVO grátis online.">
+<meta name="keywords" content="tv ao vivo gratis, tv japonesa ao vivo, assistir tv brasil, ufc combate ao vivo, filmes online gratis, telecine ao vivo, hbo online, desenhos ao vivo, anime ao vivo, canais online gratis">
+<meta name="author" content="NihonTV">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<link rel="canonical" href="https://nihontv2026.github.io/nihontv/">
+
+<!-- OPEN GRAPH (WHATSAPP / FACEBOOK) -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="NihonTV - TV Ao Vivo Grátis (Japão, Brasil, Filmes, UFC, Desenhos)">
+<meta property="og:description" content="Assista canais ao vivo grátis: Japão, Brasil, UFC, filmes, séries, desenhos e muito mais.">
+<meta property="og:image" content="https://nihontv2026.github.io/nihontv/professor-og.png">
+<meta property="og:image:secure_url" content="https://nihontv2026.github.io/nihontv/professor-og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://nihontv2026.github.io/nihontv/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NihonTV">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NihonTV - TV Ao Vivo Grátis">
+<meta name="twitter:description" content="Canais ao vivo: Japão, Brasil, filmes, UFC, desenhos e muito mais.">
+<meta name="twitter:image" content="https://nihontv2026.github.io/nihontv/professor-og.png">
+
+<link rel="icon" href="neonlogo.png">
+
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!-- GOOGLE ANALYTICS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62B6HQR4W1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-62B6HQR4W1');
+</script>
+
+<style>
+
+/* BASE */
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:#fff;
+}
+
+/* HERO (SUA FOTO) */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:30px;
+    background:#000;
+    gap:20px;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size:36px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px #00c3ff;
+}
+
+.hero-text p{
+    color:#ccc;
+}
+
+.hero-text a{
+    display:inline-block;
+    padding:12px 25px;
+    background:#00c3ff;
+    color:#000;
+    border-radius:6px;
+    text-decoration:none;
+    margin-top:10px;
+}
+
+/* FOTO */
+.hero-img{
+    max-width:500px;
+}
+
+.hero-img img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* PLAYER */
+.player-box{
+    width:100%;
+    height:420px;
+    background:#000;
+    margin:20px 0;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+#player{
+    width:100%;
+    height:100%;
+}
+
+/* GRID */
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+/* CARD */
+.card{
+    background:#1c1c1c;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+/* IMAGEM CORRIGIDA */
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:contain;
+    background:#000;
+}
+
+/* TEXTO */
+.card-body{
+    padding:10px;
+}
+
+/* BOTÃO */
+button{
+    width:100%;
+    padding:10px;
+    background:red;
+    border:none;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkred;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .player-box{
+        height:250px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="hero-text">
+<h1>Ildebrando Leandro</h1>
+<p>Especialista em Marketing Digital, Web Design e estratégias online.</p>
+
+<a href="https://professorildebrandoleandro.github.io/Ildebrando.html" target="_blank">
+Acessar Perfil
+</a>
+</div>
+
+<div class="hero-img">
+<a href="index1.html" target="_blank">
+<img src="professor-og.png">
+</a>
+</div>
+
+</div>
+
+<!-- PLAYER -->
+<div class="player-box" id="playerBox">
+  <video id="player" controls style="width:100%; height:100%;"></video>
+</div>
+
+<h2 style="padding-left:15px;">📺 Canais</h2>
+
+<d class="video-grid">
+
+<!-- JAPONESES -->
+<div class="card">
+<img src="Nippon_TV_logo_2014.svg.png">
+<div class="card-body">
+Nippon TV
+<button onclick="play('https://nl.utako.moe/Nippon_TV/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<div class="card">
+<img src="TBS_2004_logo.svg.png">
+<div class="card-body">
+TBS
+<button onclick="play('https://nl.utako.moe/TBS/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<!-- SPACE -->
+<div class="card">
+<img src="space.png">
+<div class="card-body">
+SAPACE
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=space')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="asahi tv.png">
+<div class="card-body">
+TV Asahi
+<button onclick="play('https://nl.utako.moe/TV_Asahi/index.m3u8')">Assistir</button>
+</div>
+</div>
+
+<!-- BAND -->
+<div class="card">
+<img src="band.png">
+<div class="card-body">
+Band Brasil
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=band')">
+Assistir
+</button>
+</div>
+</div>
+
+<!-- ESPORTES -->
+<div class="card">
+<img src="ufc.png">
+<div class="card-body">
+UFC AO VIVO
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=ufcfightpass')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="combate.png">
+<div class="card-body">
+Combate
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=combate')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="sbt.webp">
+<div class="card-body">
+SBT Brasil
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=sbt')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="glogo.png">
+<div class="card-body">
+Globo Brasil
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=bobosp')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="record.png">
+<div class="card-body">
+Record TV
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=record')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="redetv.png">
+<div class="card-body">
+RedeTV!
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=redetv')">
+Assistir
+</button>
+</div>
+</div>
+
+
+<div class="card">
+<img src="adult swim.png">
+<div class="card-body">
+Adult Swim
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=adultswim')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="SportTV.webp">
+<div class="card-body">
+SporTV 1
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=sportv1')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="telecine action.jpg">
+<div class="card-body">
+Telecine Action
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=telecineaction')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="telecinecult.webp">
+<div class="card-body">
+Telecine Cult
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=telecinecult')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="telecine toch.png">
+<div class="card-body">
+Telecine Touch
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=telecinetouch')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="megapix.webp">
+<div class="card-body">
+Megapix
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=megapix')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="lifetime.webp">
+<div class="card-body">
+Lifetime
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=lifetime')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="prime.jpg">
+<div class="card-body">
+Prime Box Brazil
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=primeboxbrazil')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Discovery Channel.webp">
+<div class="card-body">
+Discovery Channel
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=discovery')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="discovery turbo.jpg">
+<div class="card-body">
+Discovery Turbo
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=discoveryturbo')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="globo play.jpg">
+<div class="card-body">
+Globoplay Novelas
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=globoplaynovelas')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cinemax.png">
+<div class="card-body">
+Cinemax
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=cinemax')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo.webp">
+<div class="card-body">
+HBO
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbo')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo2.webp">
+<div class="card-body">
+HBO 2
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbo2')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo family.jpg">
+<div class="card-body">
+HBO Family
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbofamily')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo mundi.png">
+<div class="card-body">
+HBO Mundi
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbomundi')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo+.png">
+<div class="card-body">
+HBO+
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hboplus')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbopop.jpg">
+<div class="card-body">
+HBO Pop
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbopop')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="HBO  Signature.png">
+<div class="card-body">
+HBO Signature
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hbosignature')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="hbo extreme.webp">
+<div class="card-body">
+HBO Xtreme
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=hboxtreme')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="amc.png">
+<div class="card-body">
+AMC
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=amc')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="A&E.png">
+<div class="card-body">
+A&E
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=aie')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="A&E SERIES.webp">
+<div class="card-body">
+A&E Séries
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=amcseries')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="ANIMAL PLANET.webp">
+<div class="card-body">
+Animal Planet
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=animalplanet')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="AXN.webp">
+<div class="card-body">
+AXN
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=axn')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="id.png">
+<div class="card-body">
+Investigation Discovery
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=investigacaodiscovery')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="multishow.png">
+<div class="card-body">
+Multishow
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=multishow')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="sony muvies.png">
+<div class="card-body">
+Sony Movies
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=sonymovies')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="sony.png">
+<div class="card-body">
+Sony Channel
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=sony')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="tcl.jpg">
+<div class="card-body">
+TLC
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=tlc')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="tnt.webp">
+<div class="card-body">
+TNT
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=tnt')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="USA.png">
+<div class="card-body">
+USA Network
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=usa')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="GloobinhoLogo.png">
+<div class="card-body">
+Gloobinho
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=gloobinho')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="gloob.png">
+<div class="card-body">
+Gloob
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=gloob')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="discovery kids.png">
+<div class="card-body">
+Discovery Kids
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=discoverykids')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cartoonito.png">
+<div class="card-body">
+Cartoonito
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=cartoonito')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cartoonnet.jpg">
+<div class="card-body">
+Cartoon Network
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=cartoon')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="Boxkidstv.png" alt="Box Kids TV">
+
+<div class="card-body">
+<p>Box Kids TV</p>
+
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=boxkidstv')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cnn.png" alt="CNN Brasil">
+
+<div class="card-body">
+<p>CNN Brasil</p>
+
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=cnnbrasil')">
+Assistir
+</button>
+</div>
+</div>
+
+<div class="card">
+<img src="redord news.png" alt="Record News">
+
+<div class="card-body">
+<p>Record News</p>
+
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=recordnews')">
+Assistir
+</button>
+</div>
+</div>
+
+
+<div class="card">
+<img src="Bloomberg.png" alt="Bloomberg">
+
+<div class="card-body">
+<p>Bloomberg</p>
+
+<button onclick="playIframe('https://redecanaistv.ph/player3/ch.php?canal=bloomberg')">
+Assistir
+</button>
+</div>
+</div>
+
+
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+/* PLAYER HLS */
+function play(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = '<video id="player" controls style="width:100%; height:100%;"></video>';
+    const video = document.getElementById('player');
+
+    if(Hls.isSupported()){
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    }else{
+        video.src = url;
+    }
+
+    video.play();
+}
+
+/* PLAYER IFRAME */
+function playIframe(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = `
+        <iframe 
+        src="${url}" 
+        style="width:100%; height:100%; border:none;"
+        allowfullscreen>
+        </iframe>
+    `;
+}
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+/* PLAYER HLS */
+function play(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = '<video id="player" controls style="width:100%; height:100%;"></video>';
+    const video = document.getElementById('player');
+
+    if(Hls.isSupported()){
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    }else{
+        video.src = url;
+    }
+
+    video.play();
+}
+
+/* PLAYER IFRAME */
+function playIframe(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = `
+        <iframe 
+        src="${url}" 
+        style="width:100%; height:100%; border:none;"
+        allowfullscreen>
+        </iframe>
+    `;
+}
+
+</script><script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+function play(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = '<video id="player" controls style="width:100%; height:100%;"></video>';
+    const video = document.getElementById('player');
+
+    if(Hls.isSupported()){
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    }else{
+        video.src = url;
+    }
+
+    }
+
+    video.play();
+}
+
+function playIframe(url){
+    const box = document.getElementById('playerBox');
+
+    box.innerHTML = `
+        <iframe 
+        src="${url}" 
+        style="width:100%; height:100%; border:none;"
+        allowfullscreen
+        sandbox="allow-scripts allow-same-origin"
+        referrerpolicy="no-referrer">
+        </iframe>
+    `;
+}
+</script>
+
+</body>
+</html>
