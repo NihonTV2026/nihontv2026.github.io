@@ -22,11 +22,13 @@
 <meta property="og:description" content="Assista canais ao vivo grátis: Japão, Brasil, UFC, filmes, séries, desenhos e muito mais.">
 <meta property="og:image" content="https://nihontv2026.github.io/nihontv/professor-og.png">
 <meta property="og:image:secure_url" content="https://nihontv2026.github.io/nihontv/professor-og.png">
+   
+<!-- OPEN GRAPH IMAGE -->
+<meta property="og:image" content="https://nihontv2026.github.io/nihontv/neon.png">
+<meta property="og:image:secure_url" content="https://nihontv2026.github.io/nihontv/neon.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://nihontv2026.github.io/nihontv/">
-<meta property="og:type" content="website">
 <meta property="og:site_name" content="NihonTV">
 
 <!-- TWITTER -->
@@ -816,11 +818,7 @@ function playIframe(url){
     `;
 }
 
-</script><script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<script>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <script>
 function play(url){
@@ -837,14 +835,12 @@ function play(url){
         video.src = url;
     }
 
-    }
-
-    video.play();
+    video.play(); // 👉 estava fora do lugar
 }
 
 function playIframe(url){
     const box = document.getElementById('playerBox');
-
+ 
     box.innerHTML = `
         <iframe 
         src="${url}" 
@@ -856,6 +852,4 @@ function playIframe(url){
     `;
 }
 </script>
-
-</body>
 </html>
